@@ -1,0 +1,298 @@
+* {box-sizing: border-box;}
+/*with these you can specify where exactly things are supposed to go using the w3schools examples */
+:root {
+    --primary-color: white;
+    --secondary-color: #6b2e81;
+    --accent-color: #eab32c;
+    --background-color: rgb(248, 244, 244); /* column background color */
+    --text-color:black;
+}
+
+html {     /* scroll padding top, when you add this fixed postiion the deault for it coming up is that it will go to 0, you want the top of the section so that its meet it against the top section. Badically the very top is 0 but we are pushing the 0 line below the nav 250px seemed to work best for her */
+    scroll-padding-top: 250px;
+    background-color: var(--background-color);
+}
+
+body {color: var(--text-color);
+    background-color: var(--background-color)
+}
+
+#wrapper {
+    background-color: var(--primary-color);
+    padding-bottom: 50px;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    position: sticky;
+    top: 0;                     /*without left & right, it seemed to not span horizontally | text transform cam change it from buttons to only text*/
+    left: 0;
+    right:0;
+    z-index: 10;                /* can set as 1, 99, or some people do it in tens if used a lot for example: 10, 20, 30... */
+}
+
+nav ul {
+    padding-bottom: 30px;   /*added padding to create space between content */
+}
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+    color:white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px;
+    color:white;
+    font-family: sans-serif, system-ui, serif;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+section {
+    border-style: solid;      /* I will remove later to make it seem better, use borders to see whats happening*/
+    border-width: 2px;
+    background-color: var(--primary-color);
+    height:auto;   /* all content was no fitting so I did this to make them fit to the content */
+    margin-bottom: 60px;    /* to add spacing between each section */
+}
+
+section h1, h2, h3 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+h1 { text-align: center; 
+    font-size: 3em;
+    color: var(--text-color);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2 { font-size: 2.5em; 
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 100;
+}
+h3 { font-size: 2em; 
+    text-align: left;
+    margin-left: 20px;
+    font-family: sans-serif, system-ui, serif;
+      letter-spacing: 2px;
+}
+
+p { font-size: 1.5em; 
+    margin: 1em;
+    font-family:sans-serif, system-ui, serif;
+}
+
+a {
+    color: var(--tertiary-color);
+}
+
+ul { margin: 1em; }
+
+ul li { font-size: 1.5em;
+    line-height: 160%;
+    font-family: sans-serif, system-ui, serif;
+}
+
+.right-align { text-align: right; }
+
+#back2top {
+    position: fixed;
+    bottom: 25;
+    right: 25px;
+    z-index: 10;
+}
+
+#back2top a {                      /* YOU WANT TO BE ABLE TO CLICK TEXT AND THE BUTTON FOR THE LINK TO WORK SO YOU CAN USE PADDING TO MAKE IT WORK */
+    padding: 0.5em;
+    border: black;
+    border-radius: 1em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#back2top a:hover {
+    background-color: white;
+    border-color:blue;
+    color:black;
+}
+
+nav { 
+    height:200px;
+}
+
+    nav ul {
+    text-align: center;
+}
+
+section { padding: 2em; 
+    border-radius: 4em;
+}
+
+section p, section ul { padding: 2em;
+}
+
+
+h3 { font-size: 2em; 
+    text-align: left;
+    margin-left: 100px;
+}
+
+p { font-size: 1.5em; }
+
+ul li { font-size: 1.5em;
+    line-height: 160%;
+}
+
+#top {
+    background-color: var(--accent-color);
+    margin-top: 45px;
+}
+
+#top h1 {
+    color: var(--text-color);
+}
+
+#back2top {
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+    color:white;
+    z-index: 99;
+}
+
+#back2top a {
+    background-color: var(--accent-color);
+    border: var(--secondary-color) solid 3px;
+    padding: .5em;
+    border-radius: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+#back2top a:hover {
+    background-color: #8f5ca2;
+    border-color: #74328c;
+    color: var(--text-color);
+}
+
+
+footer {
+    margin-top: -50px;
+    color: rgb(0, 0, 0);
+    height: 200px;
+}
+
+#myVideo {
+  /* I added this to make it follow the wrapper column structure*/
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    
+}
+
+#photo {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+
+@media (min-width: 1090px) {  /* messed with the width to fit my desktop screen */
+    
+    html {     /* scroll padding top, when you add this fixed postiion the deault for it coming up is that it will go to 0, you want the top of the section so that its meet it against the top section. Badically the very top is 0 but we are pushing the 0 line below the nav 250px seemed to work best for her */
+        scroll-padding-top: 250px;
+        background-color: var(--primary-color);
+    }
+
+    nav { 
+        max-height:150px;
+        height:auto;
+    }
+
+    #wrapper {
+    background-color: var(--background-color);
+    padding-bottom: 50px;
+    margin: 0 auto;
+    padding-left: 150px; /*wanted it single column */
+    padding-right: 150px;
+    }
+    section { padding: 2em;               /* I decided to keep the border radius on for the desktop version */
+    border-radius: 4em;
+    border-width: .3em;
+    }
+    section p, section ul { padding: 0 200px;
+    }
+
+    h3 {
+        text-align: center;  
+        padding-right: 30px;
+    }
+
+    #secondsection{
+        text-align: center;
+    }
+
+    #section p {
+        padding-top:30px;
+        padding-bottom: 30px;
+    }
+
+    #myVideo {
+        max-width: 900px;
+        display: block;
+        margin-left: auto;  /*https://www.w3schools.com/css/css3_image_center.asp*/
+        margin-right: auto;
+    }
+
+    #photo {
+       max-width: 900px;
+        display: block;
+        margin-left: auto;  /*https://www.w3schools.com/css/css3_image_center.asp*/
+        margin-right: auto;
+    }
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 1.5em 0.25em;
+    }
+    nav ul li a {
+        text-decoration: none;
+        padding: 15px 20px;
+        border: var(--secondary-color) solid 1px;
+        border-radius: 1em;
+        background-color: var(--accent-color);
+        color: white;
+    }
+
+    nav ul li a:hover {
+            background-color: white;
+        color: var(--accent-color);
+        border-color: white;
+    }
+
+    #back2top {
+        position: fixed;   /*this positioned the button to the bottom on the desktop version making it so that it is not in the way of the content */
+        bottom: 25px;
+        right: 25px;
+        z-index: 10;
+    }
+
+    #top {
+      background-color: var(--accent-color);
+        margin-top: 60px;
+    }
+    #wrapper {
+        background-color: var(--background-color);   /* this alows the desktop version of the site to have a background with gray color to create contrast */
+        padding-bottom: 50px;
+    }
+
+    footer {
+    text-align: center;           /* The copyright appeared out of place without it being centered on the desktop version */
+    }
+    
+}
